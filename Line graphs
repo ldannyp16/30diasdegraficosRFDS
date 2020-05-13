@@ -1,0 +1,18 @@
+
+ICES<-read.table("D:/Econometrics/RetoDiario/Base_Dia2.txt",header=TRUE)
+ICES
+attach(ICES)
+summary(ICES)
+
+#crear gráfico base
+p <- plot(AÃ.O, UNIVERSIDADES, type = "b", frame = FALSE, pch = 14, 
+     col = "red", xlab = "Años", ylab = "ICES", main = "Índice de Costos de la Educación Superior 2010 - 2019")
+#insetar líneas
+
+lines(AÃ.O, INST_UNIVERSITARIAS, pch = 18, col = "blue", type = "b", lty = 2)
+lines(AÃ.O, INST_TECNOLOGICAS, pch = 18, col = "darkgreen", type = "b", lty = 3)
+lines(AÃ.O, INST_TECNICAS, pch = 18, col = "orange", type = "b", lty = 3)
+
+#insertar nonmbres de los ejes
+
+legend("topleft", legend=c("Universidades", "Instituciones Universitarias", "Institucuines Tecnológicas", "Instituciones Técnicas"), col=c("red", "blue", "darkgreen", "orange"), lty = 1:2, cex=0.8)
