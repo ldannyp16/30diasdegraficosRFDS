@@ -1,0 +1,43 @@
+
+pobreza<-read.table("D:/Econometrics/RetoDiario/Base_Dia3.txt",header=TRUE)
+pobreza
+attach(pobreza)
+class(pobreza)
+summary(pobreza)
+
+#si necesito ampliar la gráfica puedo usar esto  xlim = c(29, 57.1), ylim = c(25, 53.8),
+
+#diagrama básico con plot
+
+plot(pobreza[,1], pobreza[,2], main="Gráfica 01.1a.: Diagrama de Dispersión")
+abline(lm(pobreza[,2]~pobreza[,1]), col="yellow")
+
+plot(P_monetaria ~ Gini, data = pobreza, xlab = "Gini", ylab = "Pobreza Monetaria", main="Pobreza Monetaria x Gini: Diagrama de Dispersión")
+MLatin <- lm(P_monetaria ~ Gini, data = pobreza)
+abline(MLatin, col = "red")
+
+
+#diagrama con ggplot
+
+library(ggplot2)
+library(gapminder)
+
+
+P<-ggplot(pobreza, aes(x=Gini, y=P_monetaria)) + geom_point() + ggtitle("Pobreza Monearia x Gini: Diagrama de Dispersión") +
+  xlab("Gini") + ylab("Pobreza Monetaria") + geom_smooth(method=lm)
+
+
+
+#diagrama de dispersión y residuos
+
+par(mfrow = c(2, 2))
+plot(P_monetaria ~ Gini, data = pobreza, xlab = "Gini (a)", ylab = "Pobreza Monetaria", main="Gráfico 01.2a")
+m0 <- lm(Gini ~ P_monetaria, data = pobreza)
+abline(m0)
+plot(pobreza$Gini, residuals(m0), xlab = "Gini (b)", ylab = "Residuales", main="Gráfico 01.2b")
+abline(h = 0, lty = 2)
+plot(log10(P_monetaria) ~ Gini, data = pobreza, xlab = "Gini (c)", ylab = "log(Pobreza Monetaria)", main="Gráfico 01.2c")
+m1 <- lm(log10(P_monetaria) ~ Gini, data = pobreza)
+abline(m1)
+plot(pobreza$Gini, residuals(m1), xlab = "Gini (d)", ylab = "Residuales", main="Gráfico 01.2d")
+abline(h = 0, lty = 2)
