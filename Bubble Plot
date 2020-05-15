@@ -1,0 +1,48 @@
+#Descargar fuentes
+backcolor<-"white"
+colortext<-"black"
+
+#Paleta de colores
+palette30<-c("#FFA45E",  "#262253", "#EC4176", "#543884", "#A13770", "9B77CF")
+#crear una paleta con N valores del color al color que le asigno
+#palette <- colorRampPalette(c("#9B77CF" ,"#262253"))
+
+#Elegir paleta
+install.packages("extrafont")
+font_import()
+library(extrafont) # la primera vez ejecutar font_import()
+loadfonts()
+font<- "Trebuchet MS" #Fuente que voy a utlizar
+
+#1 cargar librerías y base de datos
+
+library(tidyverse)
+library(ggrepel)
+POBREZA
+
+#2 dar nombres
+colnames(POBREZA)=c("CIUDAD","FECHA","MONETARIA","GINI")
+colnames(POBREZA)
+
+#3 graficar
+p <- ggplot(POBREZA, 
+            aes(x =MONETARIA, y=GINI, colour = CIUDAD)) + geom_point(show.legend = FALSE, alpha = 0.7) +
+  scale_color_viridis_d() +
+  scale_size(range = c(2, 12))  +
+  labs(x = "Incidencia de la Pobreza Monetaria  Extrema", y = "Coeficiente de GINI")+theme(text=element_text(family = font),
+      plot.background = element_rect(fill = "white", color=NA), strip.background =element_blank(),
+       panel.border = element_blank(), panel.grid.minor = element_blank(), panel.grid.major = element_blank(),
+         legend.background = element_rect(fill=backcolor, size=0.5, linetype="solid"), plot.title = element_text(size=20, hjust=0,face="bold", color="#33FF99"), 
+            plot.subtitle = element_text(face="italic", size=12, hjust=0), plot.caption = element_text( face="italic", size=10, hjust = 1), 
+              axis.text.x = element_text(angle = 90, hjust = 1, color=colortext), axis.text.y = element_text(color=colortext), 
+                legend.position = "top")+ labs(title= "Día 3: Gráfico de Burbujas", subtitle = "Pobreza de monetaria y Coeficiente de GINI",
+                  caption ="Fuente:DANE \n Elaborado por Lizeth Daniela Plata")
+p
+
+p + transition_time(FECHA) +
+  labs(title = "Día 3: Gráfico de burbujas")
+
+
+p + transition_time(FECHAr) +
+  labs(title = "FECHAr: {frame_time}") +
+  shadow_mark(alpha = 0.3, size = 0.5)
