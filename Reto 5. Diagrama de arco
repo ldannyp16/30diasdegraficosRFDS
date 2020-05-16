@@ -1,0 +1,29 @@
+# install 'devtools' if you haven't
+install.packages("devtools")
+# load devtools
+library(devtools)
+# then download 'arcdiagram' using 'install_github'
+install_github('gastonstat/arcdiagram')
+library(arcdiagram)
+library(igraph)
+install.packages("randomcoloR")
+library(randomcoloR)
+
+# create a graph with 8 nodes
+star_graph = graph.star(19, mode = "out")
+# add names to nodes
+V(star_graph)$name = paste("node", 1:vcount(star_graph), sep = "-")
+# extract edgelist
+star_edges = get.edgelist(star_graph)
+# plot arc diagram
+arcplot(star_edges, las = 1)
+
+#####
+# create an edgelist
+lab = rbind(c("ALVARO URIBE V", "CLAUDIA TURBAY Q"), c("ALVARO URIBE V", "JULIO TURBAY"), c("JULIO TURBAY", "CLAUDIA TURBAY Q"), c("MARIA HOYOS", "JULIO TURBAY"), c("MARIA HOYOS", "JUAN M SANTOS"), c("ALVARO URIBE V", "JUAN M SANTOS"), c("JUAN M SANTOS",  "JORGE CALDERON"), c("JUAN M SANTOS", "LUCILA CUELLAR C"), c("JUAN M SANTOS", "MARIA HOLGUIN"), c("LUCILA CUELLAR C", "MARIA OLGUIN"), c("JORGE CALDERON", "LUCILA CUELLAR C"), c("LUCILA CUELLAR C", "LUIS CUELLAR C"), c("LUIS CUELLAR C", "MARIA LOPEZ"), c("MARIA LOPEZ", "ALFONSO LOPEZ"), c("MARIA LOPEZ", "ALFONSO LOPEZ P"), c("ALFONSO LOPEZ P", "ALFONSO LOPEZ"), c("SIMON GAVIRIA M", "JUAN M SANTOS"), c("SIMON GAVIRIA M", "CESAR GAVIRIA T"), c("SIMON GAVIRIA M", "MARIA GAVIRIA"), c("CESAR GAVIRIA T", "MARIA GAVIRIA"), c("MARIA GAVIRIA", "DAVID BARQUIL"), c("CESAR GAVIRIA T", "ERNESTO SAMPER"), c("ERNESTO SAMPER", "MIGUEL SAMPER S"), c("MIGUEL SAMPER S", "JUAN M SANTOS"), c("JUAN M SANTOS", "FRANCISO SANTOS"), c("FRANCISCO SANTOS", "ALVARO URIBE V"))
+arcplot(lab)
+arcplot(lab,col.arcs = hsv(runif(3,0.1,0.8),alpha=0.5),lwd.arcs = 2, lty.arcs = 1,
+        lend = 1, ljoin = 2, lmitre = 1, show.nodes = TRUE,
+        pch.nodes = 19, cex.nodes = 1, col.nodes = "#b8e0f2",
+        bg.nodes = "gray60", lwd.nodes = 1, show.labels = TRUE,
+        col.labels = hsv(0, 0, 0.1, 0.25), cex.labels = 0.6, las = 2,font = 0.3, line = 0, outer = FALSE,main="Redes y vínculos de parentesco en el poder colombiano",sub="Elaborado por Daniela Plata / @ldannyp16",fon.sub=4,cex.sub=0.3)
