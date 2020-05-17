@@ -1,0 +1,23 @@
+#librería
+library(ggplot2)
+
+#crear datos
+data <- data.frame(
+  category = c("Ninguno", "Primaria", "Secundaria","Media", "TyT", "Universitaria", "Posgrado"),
+  count = c(15.1, 23.3, 5.6, 33.1, 10.9, 8.4, 3.7))
+
+
+#calcular porcentajes
+data$fraction = data$count / sum(data$count)
+
+#calcular el porcentaje acumulado
+data$ymax = cumsum(data$fraction)
+
+#calcular la parte interior de cada rectángulo
+data$ymin = c(0, head(data$ymax, n=-1))
+
+#graficar
+ggplot(data, aes(ymax=ymax, ymin=ymin, xmax=4, xmin=3, fill=category)) +
+  geom_rect() +
+  coord_polar(theta="y") + 
+  xlim(c(2, 4))
