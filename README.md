@@ -5,5 +5,6 @@ para conmemorar el nacimiento de Florence Nightingale, en el que se propone crea
 
 ### Día 1. Gráfico de barras
 
-Histograma: Hogares en centros poblados y dispersos sin acceso a servicios públicos en Colombia [Código](scripts/Reto_1._Diagrama_de_barras).
+Histograma: Hogares en centros poblados y dispersos sin acceso a servicios públicos en Colombia (2005-2018)
 
+*Clic aquí para ver el Código*
