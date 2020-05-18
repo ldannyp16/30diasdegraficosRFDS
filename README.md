@@ -8,3 +8,6 @@ para conmemorar el nacimiento de Florence Nightingale, en el que se propone crea
 Histograma: Hogares en centros poblados y dispersos sin acceso a servicios públicos en Colombia (2005-2018)
 
 *Clic aquí para ver el Código*
+
+![Reto 1 Diagrama de barras](https://user-images.githubusercontent.com/65268601/82164541-c19bd680-9876-11ea-8475-b5d4790cc30b.png)
+
