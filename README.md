@@ -37,6 +37,8 @@ Cambios en la movilidad de las personas como consecuentas de las políticas esta
 
 Redes y vínculos de parentesco en el poder político colombiano
 
+![Reto 5  Diagrama de arco](https://user-images.githubusercontent.com/65268601/82279046-38a59d80-9951-11ea-808f-25fd8eb00c1c.png)
+
 ### Día 6. Gráfico de donas
 
 Porcentaje de población ocupada según último nivel educativo alcanzado (Colombia, 2019)
