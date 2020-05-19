@@ -31,6 +31,8 @@ Pobreza monetaria y coeficiente de Gini 2014-2018
 
 Cambios en la movilidad de las personas como consecuentas de las políticas establecidas para combatir el COVID-19
 
+![Reto 4  Gráfico de facetas](https://user-images.githubusercontent.com/65268601/82278928-f8deb600-9950-11ea-8ba9-2b3369dd0cfb.png)
+
 ### Día 5. Diagrama de arco
 
 Redes y vínculos de parentesco en el poder político colombiano
