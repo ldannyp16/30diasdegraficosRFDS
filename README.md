@@ -41,6 +41,8 @@ Redes y vínculos de parentesco en el poder político colombiano
 
 ### Día 6. Gráfico de donas
 
+![Reto 6  Gráfico de donas](https://user-images.githubusercontent.com/65268601/82279119-5ffc6a80-9951-11ea-9780-2bfc3ac90bf8.png)
+
 Porcentaje de población ocupada según último nivel educativo alcanzado (Colombia, 2019)
 
 ### Día 7. Gráfico ridgeline
