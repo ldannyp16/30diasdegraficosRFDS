@@ -23,6 +23,9 @@ Pobreza monetaria y coeficiente de Gini 2014-2018
 
 ![Reto 3  Gráfico de burbujas](https://user-images.githubusercontent.com/65268601/82278661-59b9be80-9950-11ea-910d-785875bc4f6b.gif)
 
+#DATASAURUS
+
+![dino](https://user-images.githubusercontent.com/65268601/82278779-9dacc380-9950-11ea-9a6c-083a03c2c228.gif)
 
 ### Día 4. Gráfico de facetas
 
