@@ -12,3 +12,30 @@ Histograma: Hogares en centros poblados y dispersos sin acceso a servicios públ
 
 *Código: [https://github.com/ldannyp16/30diasdegraficosRFDS/blob/master/Reto%201.%20Diagrama%20de%20barras](url)*
 
+### Día 2. Gráfico de líneas
+
+Indice de costos de la educación superior 2010-2019
+
+
+### Día 3. Gráfico de Burbujas
+
+Pobreza monetaria y coeficiente de Gini 2014-2018
+
+### Día 4. Gráfico de facetas
+
+Cambios en la movilidad de las personas como consecuentas de las políticas establecidas para combatir el COVID-19
+
+### Día 5. Diagrama de arco
+
+Redes y vínculos de parentesco en el poder político colombiano
+
+### Día 6. Gráfico de donas
+
+Porcentaje de población ocupada según último nivel educativo alcanzado (Colombia, 2019)
+
+### Día 7. Gráfico ridgeline
+
+Variación morfológica de la flor Iris en sus tres especies
+
+
+
