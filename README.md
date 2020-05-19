@@ -16,6 +16,9 @@ Histograma: Hogares en centros poblados y dispersos sin acceso a servicios públ
 
 Indice de costos de la educación superior 2010-2019
 
+![Reto 2 Grafica de lineas](https://user-images.githubusercontent.com/65268601/82278440-d4cea500-994f-11ea-8e71-7ca6733abd4d.png)
+
+
 
 ### Día 3. Gráfico de Burbujas
 
