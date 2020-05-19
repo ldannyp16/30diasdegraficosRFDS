@@ -10,8 +10,6 @@ Histograma: Hogares en centros poblados y dispersos sin acceso a servicios públ
 ![Reto 1 Diagrama de barras](https://user-images.githubusercontent.com/65268601/82164541-c19bd680-9876-11ea-8475-b5d4790cc30b.png)
 
 
-*Código: [https://github.com/ldannyp16/30diasdegraficosRFDS/blob/master/Reto%201.%20Diagrama%20de%20barras](url)*
-
 ### Día 2. Gráfico de líneas
 
 Indice de costos de la educación superior 2010-2019
@@ -19,10 +17,12 @@ Indice de costos de la educación superior 2010-2019
 ![Reto 2 Grafica de lineas](https://user-images.githubusercontent.com/65268601/82278440-d4cea500-994f-11ea-8e71-7ca6733abd4d.png)
 
 
-
 ### Día 3. Gráfico de Burbujas
 
 Pobreza monetaria y coeficiente de Gini 2014-2018
+
+![Reto 3  Gráfico de burbujas](https://user-images.githubusercontent.com/65268601/82278661-59b9be80-9950-11ea-910d-785875bc4f6b.gif)
+
 
 ### Día 4. Gráfico de facetas
 
