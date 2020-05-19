@@ -1,0 +1,16 @@
+library(ggplot2)
+library(ggridges)
+
+t<-ggplot(iris, aes(x = Sepal.Length, y = Species, fill = factor(stat(quantile)))) +
+  stat_density_ridges(
+    geom = "density_ridges_gradient",
+    calc_ecdf = TRUE,
+    quantiles = c(0.025, 0.975)
+  ) +
+   xlab("Porcentajes de variación") +
+  ylab("Especies de Iris") +
+  labs(title="Variación morfológica de la flor Iris en sus tres especies",caption=element_text("@LDannyP16")) +scale_fill_manual(
+    name = "Probabilidad", values = c("#FF0000A0", "#A0A0A0A0", "#0000FFA0"),
+    labels = c("(0, 0.025]", "(0.025, 0.975]", "(0.975, 1]")
+  )
+t
