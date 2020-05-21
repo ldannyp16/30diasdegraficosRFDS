@@ -1,0 +1,28 @@
+
+#libreria
+
+library(ggplot2)
+
+#base de datos
+
+datos <- read.table("D:/Econometrics/RetoDiario/Base_Dia9.txt")
+datos
+colnames(datos) <- c("Año", "PET", "Porcentaje")
+
+attach(datos)
+summary(datos)
+
+col <- c("blue", "orange", "yellow")
+
+
+#Stacked
+ggplot(datos, aes(fill=PET, y=Porcentaje, x=Año)) + 
+  geom_bar(position="stack", stat="identity") 
+   
+ 
+#Stacked + percent
+ggplot(datos, aes(fill=PET, y=Porcentaje, x=Año)) + 
+  geom_bar(position="fill", stat="identity") +
+  labs(title="Población en Edad de Trabajar (PET)en COLOMBIA", subtitle="Fuerza laboral colombiana de 2010 a 2018",caption=element_text("Fuente: Gran Encuesta Integrada de Hogares, DANE"))
+
+
