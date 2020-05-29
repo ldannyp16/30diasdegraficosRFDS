@@ -1,0 +1,22 @@
+#elegir fuente
+library(extrafont) # la primera vez ejecutar font_import()
+loadfonts()
+font<- "Palatino" 
+
+#libreria
+library(waffle)
+
+#datos
+parts <- c("TEMPORADA 1" = 5, "TEMPORADA 2" = 7,"TEMPORADA 3"=9,"TEMPORADA 4"=12,"TEMPORADA 5"=13, "TEMPORADA 6"=14,
+"TEMPORADA 7"=18, "TEMPORADA 8"=22)
+
+#Gráfico
+p <- waffle(parts, rows = 10, colors = c("sienna",  "sienna1", "sienna2", "sienna3" , "sienna4",
+"orangered4", "orangered3", "orangered1"))
+p+
+  labs(title= "Audiencia de Game of Thrones", 
+       subtitle = "variación según temporada", 
+       x="",
+       y="",
+       caption = " @LDannyP16  \n Fuente: HBO" )+theme_bw()
+ggsave("Reto 16.png", height = 5.89, width=8.58)
